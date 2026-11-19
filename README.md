@@ -75,4 +75,4 @@ python -m visionkit.experiment             # full benchmark (~1.2 h on CPU, minu
 ```
 
 ## Data
-[EuroSAT](https://github.com/phelber/eurosat) (Helber et al., 2019) — RGB Sentinel-2 tiles, 64×714 px, 10 classes.
+[EuroSAT](https://github.com/phelber/eurosat) (Helber et al., 2019) — RGB Sentinel-2 tiles, 64×64 px, 10 classes.
