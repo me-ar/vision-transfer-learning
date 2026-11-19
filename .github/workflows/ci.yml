@@ -14,7 +14,7 @@ jobs:
           cache: pip
       - name: Install (CPU-only PyTorch)
         run: |
-          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
           pip install -r requirements-dev.txt && pip install -e .
       - run: ruff check src tests
       - run: pytest -q
