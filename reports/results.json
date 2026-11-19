@@ -1,0 +1,279 @@
+{
+  "best_model": "ResNet18 fine-tuned (ImageNet init)",
+  "results": [
+    {
+      "model": "Small CNN (from scratch)",
+      "accuracy": 0.9691,
+      "macro_f1": 0.9685,
+      "params": 584170,
+      "trainable_params": 584170,
+      "train_seconds": 2963.5,
+      "ms_per_image": 3.752
+    },
+    {
+      "model": "ResNet18 linear probe (frozen)",
+      "accuracy": 0.9175,
+      "macro_f1": 0.9141,
+      "params": 11181642,
+      "trainable_params": 5130,
+      "train_seconds": 109.8,
+      "ms_per_image": NaN
+    },
+    {
+      "model": "ResNet18 fine-tuned (ImageNet init)",
+      "accuracy": 0.9862,
+      "macro_f1": 0.9858,
+      "params": 11181642,
+      "trainable_params": 11181642,
+      "train_seconds": 1121.6,
+      "ms_per_image": 4.659
+    }
+  ],
+  "label_efficiency_linear_probe": [
+    {
+      "label_fraction": 0.01,
+      "n_labels": 187,
+      "accuracy": 0.7904,
+      "macro_f1": 0.7796
+    },
+    {
+      "label_fraction": 0.05,
+      "n_labels": 943,
+      "accuracy": 0.8756,
+      "macro_f1": 0.8712
+    },
+    {
+      "label_fraction": 0.1,
+      "n_labels": 1890,
+      "accuracy": 0.896,
+      "macro_f1": 0.8921
+    },
+    {
+      "label_fraction": 0.25,
+      "n_labels": 4723,
+      "accuracy": 0.9049,
+      "macro_f1": 0.9011
+    },
+    {
+      "label_fraction": 1.0,
+      "n_labels": 18900,
+      "accuracy": 0.9165,
+      "macro_f1": 0.9131
+    }
+  ],
+  "robustness": [
+    {
+      "model": "Small CNN (from scratch)",
+      "perturbation": "clean",
+      "accuracy": 0.9691
+    },
+    {
+      "model": "Small CNN (from scratch)",
+      "perturbation": "noise \u03c3=0.05",
+      "accuracy": 0.2128
+    },
+    {
+      "model": "Small CNN (from scratch)",
+      "perturbation": "noise \u03c3=0.1",
+      "accuracy": 0.1402
+    },
+    {
+      "model": "Small CNN (from scratch)",
+      "perturbation": "noise \u03c3=0.2",
+      "accuracy": 0.1126
+    },
+    {
+      "model": "Small CNN (from scratch)",
+      "perturbation": "blur k=3",
+      "accuracy": 0.6086
+    },
+    {
+      "model": "Small CNN (from scratch)",
+      "perturbation": "blur k=5",
+      "accuracy": 0.3805
+    },
+    {
+      "model": "Small CNN (from scratch)",
+      "perturbation": "brightness +0.2",
+      "accuracy": 0.662
+    },
+    {
+      "model": "ResNet18 fine-tuned (ImageNet init)",
+      "perturbation": "clean",
+      "accuracy": 0.9862
+    },
+    {
+      "model": "ResNet18 fine-tuned (ImageNet init)",
+      "perturbation": "noise \u03c3=0.05",
+      "accuracy": 0.1709
+    },
+    {
+      "model": "ResNet18 fine-tuned (ImageNet init)",
+      "perturbation": "noise \u03c3=0.1",
+      "accuracy": 0.1153
+    },
+    {
+      "model": "ResNet18 fine-tuned (ImageNet init)",
+      "perturbation": "noise \u03c3=0.2",
+      "accuracy": 0.1684
+    },
+    {
+      "model": "ResNet18 fine-tuned (ImageNet init)",
+      "perturbation": "blur k=3",
+      "accuracy": 0.9462
+    },
+    {
+      "model": "ResNet18 fine-tuned (ImageNet init)",
+      "perturbation": "blur k=5",
+      "accuracy": 0.8175
+    },
+    {
+      "model": "ResNet18 fine-tuned (ImageNet init)",
+      "perturbation": "brightness +0.2",
+      "accuracy": 0.9338
+    }
+  ],
+  "per_class_accuracy": {
+    "AnnualCrop": 0.9711,
+    "Forest": 1.0,
+    "HerbaceousVegetation": 0.9844,
+    "Highway": 0.9947,
+    "Industrial": 0.984,
+    "Pasture": 0.98,
+    "PermanentCrop": 0.9627,
+    "Residential": 0.9889,
+    "River": 0.9947,
+    "SeaLake": 0.9978
+  },
+  "most_confused": {
+    "true": "PermanentCrop",
+    "pred": "AnnualCrop",
+    "count": 7
+  },
+  "training_history": {
+    "cnn": [
+      {
+        "epoch": 1,
+        "train_loss": 1.2546,
+        "val_acc": 0.7279,
+        "elapsed_s": 202.4
+      },
+      {
+        "epoch": 2,
+        "train_loss": 1.0246,
+        "val_acc": 0.7807,
+        "elapsed_s": 400.8
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.9153,
+        "val_acc": 0.8163,
+        "elapsed_s": 601.5
+      },
+      {
+        "epoch": 4,
+        "train_loss": 0.8202,
+        "val_acc": 0.7919,
+        "elapsed_s": 797.4
+      },
+      {
+        "epoch": 5,
+        "train_loss": 0.7602,
+        "val_acc": 0.8183,
+        "elapsed_s": 992.4
+      },
+      {
+        "epoch": 6,
+        "train_loss": 0.7329,
+        "val_acc": 0.8867,
+        "elapsed_s": 1190.2
+      },
+      {
+        "epoch": 7,
+        "train_loss": 0.7024,
+        "val_acc": 0.9232,
+        "elapsed_s": 1387.6
+      },
+      {
+        "epoch": 8,
+        "train_loss": 0.6799,
+        "val_acc": 0.9437,
+        "elapsed_s": 1585.1
+      },
+      {
+        "epoch": 9,
+        "train_loss": 0.6607,
+        "val_acc": 0.9464,
+        "elapsed_s": 1780.9
+      },
+      {
+        "epoch": 10,
+        "train_loss": 0.6398,
+        "val_acc": 0.9531,
+        "elapsed_s": 1977.9
+      },
+      {
+        "epoch": 11,
+        "train_loss": 0.6308,
+        "val_acc": 0.9583,
+        "elapsed_s": 2174.7
+      },
+      {
+        "epoch": 12,
+        "train_loss": 0.6134,
+        "val_acc": 0.9662,
+        "elapsed_s": 2372.2
+      },
+      {
+        "epoch": 13,
+        "train_loss": 0.6042,
+        "val_acc": 0.9674,
+        "elapsed_s": 2569.9
+      },
+      {
+        "epoch": 14,
+        "train_loss": 0.5975,
+        "val_acc": 0.9694,
+        "elapsed_s": 2766.8
+      },
+      {
+        "epoch": 15,
+        "train_loss": 0.5945,
+        "val_acc": 0.9694,
+        "elapsed_s": 2963.5
+      }
+    ],
+    "ft": [
+      {
+        "epoch": 1,
+        "train_loss": 0.8693,
+        "val_acc": 0.9195,
+        "elapsed_s": 227.2
+      },
+      {
+        "epoch": 2,
+        "train_loss": 0.617,
+        "val_acc": 0.9494,
+        "elapsed_s": 449.2
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.5809,
+        "val_acc": 0.9765,
+        "elapsed_s": 672.4
+      },
+      {
+        "epoch": 4,
+        "train_loss": 0.5527,
+        "val_acc": 0.9812,
+        "elapsed_s": 896.2
+      },
+      {
+        "epoch": 5,
+        "train_loss": 0.537,
+        "val_acc": 0.9849,
+        "elapsed_s": 1121.6
+      }
+    ]
+  }
+}
